@@ -31,6 +31,64 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+// Create new tender - tender_manager only
+router.post('/', verifyToken, requireRole('tender_manager'), async (req, res) => {
+  const { 
+    title, 
+    description, 
+    tenderType,
+    categoryId,
+    estimatedValue, 
+    submissionDeadline, 
+    openingDate,
+    documentFee,
+    emdAmount
+  } = req.body
+  
+  const organizationId = req.user?.organizationId || 1 // Get from user's organization
+  
+  if (!title || !description || !submissionDeadline || !estimatedValue) {
+    return res.status(400).json({ error: 'Missing required fields' })
+  }
+  
+  try{
+    // Use stored procedure for tender creation
+    // OUT parameters need special handling with MySQL
+    const [rows] = await pool.query(
+      `CALL sp_create_tender(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, @tender_id, @error_code, @error_message)`,
+      [
+        organizationId,
+        title,
+        description,
+        tenderType || 'Goods',
+        categoryId || null,
+        submissionDeadline,
+        openingDate || null,
+        estimatedValue,
+        documentFee || 0,
+        emdAmount || 0
+      ]
+    )
+    
+    // Get OUT parameter values
+    const [outParams] = await pool.query('SELECT @tender_id as tender_id, @error_code as error_code, @error_message as error_message')
+    const result = outParams[0]
+    
+    if (result.error_code !== 0) {
+      return res.status(400).json({ error: result.error_message })
+    }
+    
+    return res.status(201).json({ 
+      ok: true, 
+      message: result.error_message,
+      tenderId: result.tender_id 
+    })
+  }catch(err){
+    console.error('tenders.create', err)
+    return res.status(500).json({ error: err.message })
+  }
+})
+
 // Award tender - expects body { bidId }
 router.post('/:id/award', verifyToken, requireRole('tender_manager'), async (req, res) => {
   const tenderId = Number(req.params.id)

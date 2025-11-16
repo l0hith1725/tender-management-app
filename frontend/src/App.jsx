@@ -8,6 +8,7 @@ import TendersPage from './pages/bidder/TendersPage'
 import TenderDetailPage from './pages/bidder/TenderDetailPage'
 import MyBidsPage from './pages/bidder/MyBidsPage'
 import ManagerTendersPage from './pages/manager/TendersPage'
+import CreateTenderPage from './pages/manager/CreateTenderPage'
 import ManagerTenderDetail from './pages/manager/TenderDetailManager'
 import EvaluatorAssignments from './pages/evaluator/AssignmentsPage'
 import EvaluatorReviewForm from './pages/evaluator/ReviewForm'
@@ -30,6 +31,7 @@ export default function App(){
           <Route path="/tenders/:id" element={<TenderDetailPage/>} />
           <Route path="/bidder/my-bids" element={<ProtectedRoute><MyBidsPage/></ProtectedRoute>} />
           <Route path="/manager/tenders" element={<ProtectedRoute><ManagerTendersPage/></ProtectedRoute>} />
+          <Route path="/manager/tenders/create" element={<ProtectedRoute><CreateTenderPage/></ProtectedRoute>} />
           <Route path="/manager/tenders/:id" element={<ProtectedRoute><ManagerTenderDetail/></ProtectedRoute>} />
           <Route path="/evaluator/assignments" element={<ProtectedRoute><EvaluatorAssignments/></ProtectedRoute>} />
           <Route path="/evaluator/reviews/:reviewId" element={<ProtectedRoute><EvaluatorReviewForm/></ProtectedRoute>} />
