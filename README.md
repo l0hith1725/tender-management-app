@@ -1,12 +1,12 @@
-# 🎯 Tender Management System - Complete & Functional
+#  Tender Management System - Complete & Functional
 
-## ✨ System Overview
+##  System Overview
 
 A **fully functional**, **production-ready** tender management system with complete frontend-backend integration. Built with React, Node.js, Express, and MySQL with stored procedures.
 
 ---
 
-## 🚀 Quick Start (3 Steps)
+## Quick Start (3 Steps)
 
 ### 1. Run Setup Check
 ```bash
@@ -30,16 +30,16 @@ npm run dev
 
 ---
 
-## 📋 What's Included
+##  What's Included
 
-### ✅ Complete Backend
+### Complete Backend
 - **Authentication** - JWT with HttpOnly cookies, SHA2-256 hashing
 - **19 Stored Procedures** - All business logic in database
 - **4 User Roles** - Admin, Tender Manager, Bidder, Evaluator
 - **Role-Based Access Control** - Middleware protection
 - **RESTful API** - Clean, consistent endpoints
 
-### ✅ Complete Frontend
+###  Complete Frontend
 - **Professional UI** - Modern, responsive design with Tailwind CSS
 - **Role-Based Navigation** - Dynamic menu based on user role
 - **Full CRUD Operations** - Create, Read, Update, Delete for all entities
@@ -47,34 +47,34 @@ npm run dev
 - **Form Validation** - User-friendly error handling
 - **Mobile Responsive** - Works on all screen sizes
 
-### ✅ Features by Role
+###  Features by Role
 
 #### 🔧 Admin
 - Manage users (create, edit, delete)
 - Manage organizations (full CRUD)
 - View system data
 
-#### 📝 Bidder
+####  Bidder
 - Browse tenders (search, filter, sort)
 - View tender details
 - Register for tenders
 - Submit bids
 - Track bid status and scores
 
-#### 📊 Tender Manager
+####  Tender Manager
 - View all tenders
 - See submitted bids
 - Compare bid amounts and scores
 - Award tenders to winning bidders
 
-#### ⭐ Evaluator
+####  Evaluator
 - View assigned reviews
 - Submit evaluations (technical + financial scores)
 - Add review comments
 
 ---
 
-## 🗂 Project Structure
+##  Project Structure
 
 ```
 tender-management-app/
@@ -114,7 +114,7 @@ tender-management-app/
 
 ---
 
-## 🔗 API Endpoints
+##  API Endpoints
 
 ### Authentication
 ```
@@ -158,50 +158,50 @@ POST   /api/evaluations/review/:reviewId      - Submit review
 
 ---
 
-## 🎨 UI Features
+##  UI Features
 
 ### Admin Panel
-- ✅ Modern table layouts with color-coded badges
-- ✅ Modal dialogs for create/edit operations
-- ✅ Inline edit and delete buttons
-- ✅ Form validation with helpful error messages
+-  Modern table layouts with color-coded badges
+-  Modal dialogs for create/edit operations
+-  Inline edit and delete buttons
+-  Form validation with helpful error messages
 
 ### Bidder Interface
-- ✅ Beautiful tender cards with key information
-- ✅ Advanced search and filtering
-- ✅ Sort by deadline or value
-- ✅ Pagination for large lists
-- ✅ Detailed tender view with deadline warnings
-- ✅ Clean bid submission modal
-- ✅ Bid tracking with status and scores
+-  Beautiful tender cards with key information
+-  Advanced search and filtering
+-  Sort by deadline or value
+-  Pagination for large lists
+-  Detailed tender view with deadline warnings
+-  Clean bid submission modal
+-  Bid tracking with status and scores
 
 ### Manager Dashboard
-- ✅ Tender list with status indicators
-- ✅ Bid comparison table
-- ✅ Radio button selection for winner
-- ✅ One-click award functionality
-- ✅ Visual score display (technical, financial, total)
+-  Tender list with status indicators
+-  Bid comparison table
+-  Radio button selection for winner
+-  One-click award functionality
+-  Visual score display (technical, financial, total)
 
 ### Evaluator Portal
-- ✅ Assignment list with tender details
-- ✅ Simple review form
-- ✅ Score input (0-100 range)
-- ✅ Comment field
+-  Assignment list with tender details
+-  Simple review form
+-  Score input (0-100 range)
+-  Comment field
 
 ---
 
-## 🔐 Security
+##  Security
 
-- ✅ **Password Security** - SHA2-256 hashing
-- ✅ **Session Management** - JWT with HttpOnly cookies
-- ✅ **Access Control** - Role-based permissions
-- ✅ **SQL Injection Prevention** - Parameterized queries
-- ✅ **XSS Protection** - React auto-escaping
-- ✅ **CSRF Protection** - Cookie-based auth
+-  **Password Security** - SHA2-256 hashing
+-  **Session Management** - JWT with HttpOnly cookies
+-  **Access Control** - Role-based permissions
+-  **SQL Injection Prevention** - Parameterized queries
+-  **XSS Protection** - React auto-escaping
+-  **CSRF Protection** - Cookie-based auth
 
 ---
 
-## 💾 Database
+##  Database
 
 **Name:** `tender_management_system`
 
@@ -219,7 +219,7 @@ POST   /api/evaluations/review/:reviewId      - Submit review
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 1. **USER_GUIDE.md** - Complete user guide with:
    - Feature descriptions for each role
@@ -243,7 +243,7 @@ POST   /api/evaluations/review/:reviewId      - Submit review
 
 ---
 
-## 🧪 Testing Workflow
+##  Testing Workflow
 
 ### Create Test Users (as admin):
 ```
@@ -283,7 +283,7 @@ POST   /api/evaluations/review/:reviewId      - Submit review
 
 ---
 
-## 🛠 Technology Stack
+##  Technology Stack
 
 ### Backend
 - **Runtime:** Node.js 24.x
@@ -304,22 +304,22 @@ POST   /api/evaluations/review/:reviewId      - Submit review
 
 ---
 
-## 📊 System Status
+##  System Status
 
 | Component | Status | Details |
 |-----------|--------|---------|
-| **Backend** | ✅ Running | Port 4000 |
-| **Frontend** | ✅ Running | Port 5173 |
-| **Database** | ✅ Ready | MySQL with 19 procedures |
-| **Authentication** | ✅ Working | JWT + HttpOnly cookies |
-| **Admin Panel** | ✅ Complete | Full CRUD operations |
-| **Bidder Portal** | ✅ Complete | Browse, bid, track |
-| **Manager Dashboard** | ✅ Complete | View, compare, award |
-| **Evaluator Portal** | ✅ Complete | Review submissions |
+| **Backend** |  Running | Port 4000 |
+| **Frontend** |  Running | Port 5173 |
+| **Database** |  Ready | MySQL with 19 procedures |
+| **Authentication** |  Working | JWT + HttpOnly cookies |
+| **Admin Panel** |  Complete | Full CRUD operations |
+| **Bidder Portal** |  Complete | Browse, bid, track |
+| **Manager Dashboard** |  Complete | View, compare, award |
+| **Evaluator Portal** |  Complete | Review submissions |
 
 ---
 
-## 🐛 Common Issues
+##  Common Issues
 
 ### Port Already in Use
 ```bash
@@ -357,20 +357,20 @@ npm run dev
 
 ---
 
-## 🎯 Key Achievements
+##  Key Achievements
 
-1. ✅ **Complete Integration** - Frontend fully connected to backend
-2. ✅ **Professional UI** - Modern, responsive design
-3. ✅ **All Roles Working** - Admin, Bidder, Manager, Evaluator
-4. ✅ **Full CRUD** - All create/read/update/delete operations
-5. ✅ **Security** - Authentication, authorization, input validation
-6. ✅ **Error Handling** - User-friendly messages throughout
-7. ✅ **Mobile Support** - Responsive on all devices
-8. ✅ **Production Ready** - Can be deployed as-is
+1.  **Complete Integration** - Frontend fully connected to backend
+2.  **Professional UI** - Modern, responsive design
+3.  **All Roles Working** - Admin, Bidder, Manager, Evaluator
+4.  **Full CRUD** - All create/read/update/delete operations
+5.  **Security** - Authentication, authorization, input validation
+6.  **Error Handling** - User-friendly messages throughout
+7.  **Mobile Support** - Responsive on all devices
+8.  **Production Ready** - Can be deployed as-is
 
 ---
 
-## 🚦 Next Steps
+##  Next Steps
 
 ### To Start Using:
 1. Run `./quick-start.sh` to verify setup
@@ -391,7 +391,7 @@ npm run dev
 
 ---
 
-## 📞 Support & Documentation
+##  Support & Documentation
 
 - **Quick Setup:** Run `./quick-start.sh`
 - **User Guide:** See `USER_GUIDE.md`
@@ -400,21 +400,21 @@ npm run dev
 
 ---
 
-## 🏆 Final Status
+##  Final Status
 
-**🎉 SYSTEM IS FULLY FUNCTIONAL AND READY TO USE! 🎉**
+** SYSTEM IS FULLY FUNCTIONAL AND READY TO USE! **
 
 All features have been implemented, tested, and documented. The system is production-ready with:
-- ✅ Complete backend with 19 stored procedures
-- ✅ Beautiful, responsive frontend
-- ✅ All 4 user roles working
-- ✅ Full CRUD operations
-- ✅ Comprehensive documentation
+-  Complete backend with 19 stored procedures
+-  Beautiful, responsive frontend
+-  All 4 user roles working
+-  Full CRUD operations
+-  Comprehensive documentation
 
-**Happy Tendering! 🚀**
+**Happy Tendering! **
 
 ---
 
 *Last Updated: November 9, 2025*  
 *Version: 1.0.0*  
-*Status: Production Ready ✅*
+*Status: Production Ready *
